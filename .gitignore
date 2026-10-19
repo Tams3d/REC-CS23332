@@ -1,0 +1,27 @@
+# Local test databases and dumps
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
+# Logs and temp output
+*.log
+*.tmp
+*.bak
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment
+.env
+.env.*
