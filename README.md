@@ -43,6 +43,16 @@
 
 </details>
 
+<details>
+<summary><strong>Basic String Functions</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 1667 | [Fix Names in a Table](https://leetcode.com/problems/fix-names-in-a-table) | Easy | [SQL](solutions/1667_fix-names-in-a-table.sql) |
+| 3374 | [First Letter Capitalization II](https://leetcode.com/problems/first-letter-capitalization-ii) | Hard | [SQL](solutions/3374_first-letter-capitalization-ii.sql) |
+
+</details>
+
 ## Usage
 
 Each solution is a standalone SQL statement. Run it against the matching schema:
