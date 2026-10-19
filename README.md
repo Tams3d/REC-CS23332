@@ -81,6 +81,22 @@
 
 </details>
 
+<details>
+<summary><strong>Intermediate Aggregation</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 180 | [Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers) | Medium | [SQL](solutions/180_consecutive-numbers.sql) |
+| 184 | [Department Highest Salary](https://leetcode.com/problems/department-highest-salary) | Medium | [SQL](solutions/184_department-highest-salary.sql) |
+| 586 | [Customer Placing the Largest Number of Orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders) | Easy | [SQL](solutions/586_customer-placing-the-largest-number-of-orders.sql) |
+| 1211 | [Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage) | Easy | [SQL](solutions/1211_queries-quality-and-percentage.sql) |
+| 1251 | [Average Selling Price](https://leetcode.com/problems/average-selling-price) | Easy | [SQL](solutions/1251_average-selling-price.sql) |
+| 1633 | [Percentage of Users Attended a Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest) | Easy | [SQL](solutions/1633_percentage-of-users-attended-a-contest.sql) |
+| 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine) | Easy | [SQL](solutions/1661_average-time-of-process-per-machine.sql) |
+| 1729 | [Find Followers Count](https://leetcode.com/problems/find-followers-count) | Easy | [SQL](solutions/1729_find-followers-count.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
