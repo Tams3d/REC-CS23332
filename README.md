@@ -5,15 +5,13 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://opensource.org/licenses/MIT)
 
-*MySQL solutions to LeetCode database problems*
-
-[Topics](#topics) - [Usage](#usage)
+*Grouped by SQL concept. Written for MySQL 8.0.*
 
 </div>
 
 ## Topics
 
-<details>
+<details open>
 <summary><strong>Basic SELECT &amp; Filtering</strong></summary>
 
 | # | Problem | Difficulty | Solution |
@@ -53,12 +51,25 @@
 
 </details>
 
-## Usage
+<details>
+<summary><strong>CASE Statements</strong></summary>
 
-Each solution is a standalone SQL statement. Run it against the matching schema:
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 610 | [Triangle Judgement](https://leetcode.com/problems/triangle-judgement) | Easy | [SQL](solutions/610_triangle-judgement.sql) |
+| 1179 | [Reformat Department Table](https://leetcode.com/problems/reformat-department-table) | Easy | [SQL](solutions/1179_reformat-department-table.sql) |
+| 1393 | [Capital Gain/Loss](https://leetcode.com/problems/capital-gainloss) | Medium | [SQL](solutions/1393_capital-gainloss.sql) |
+| 1873 | [Calculate Special Bonus](https://leetcode.com/problems/calculate-special-bonus) | Easy | [SQL](solutions/1873_calculate-special-bonus.sql) |
+| 1907 | [Count Salary Categories](https://leetcode.com/problems/count-salary-categories) | Medium | [SQL](solutions/1907_count-salary-categories.sql) |
 
-```bash
-mysql -u root -p your_database < solutions/595_big-countries.sql
-```
+</details>
 
-Solutions are named `<leetcode_id>_<problem-slug>.sql` so they line up with the problem URL.
+## Notes
+
+- Each file holds a single query: no comments, schema, or sample data.
+- Queries target MySQL 8.0, the dialect LeetCode uses for database problems.
+- Problems are grouped by the SQL concept they practice, not by difficulty.
+
+## License
+
+Released under the MIT License. See [LICENSE](LICENSE).
