@@ -64,6 +64,23 @@
 
 </details>
 
+<details>
+<summary><strong>Aggregation &amp; GROUP BY</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 182 | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails) | Easy | [SQL](solutions/182_duplicate-emails.sql) |
+| 596 | [Classes With at Least 5 Students](https://leetcode.com/problems/classes-with-at-least-5-students) | Easy | [SQL](solutions/596_classes-with-at-least-5-students.sql) |
+| 1050 | [Actors and Directors Who Cooperated at Least Three Times](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times) | Easy | [SQL](solutions/1050_actors-and-directors-who-cooperated-at-least-three-times.sql) |
+| 1484 | [Group Sold Products by the Date](https://leetcode.com/problems/group-sold-products-by-the-date) | Easy | [SQL](solutions/1484_group-sold-products-by-the-date.sql) |
+| 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions) | Easy | [SQL](solutions/1581_customer-who-visited-but-did-not-make-any-transactions.sql) |
+| 1587 | [Bank Account Summary II](https://leetcode.com/problems/bank-account-summary-ii) | Easy | [SQL](solutions/1587_bank-account-summary-ii.sql) |
+| 1693 | [Daily Leads and Partners](https://leetcode.com/problems/daily-leads-and-partners) | Easy | [SQL](solutions/1693_daily-leads-and-partners.sql) |
+| 1741 | [Find Total Time Spent by Each Employee](https://leetcode.com/problems/find-total-time-spent-by-each-employee) | Easy | [SQL](solutions/1741_find-total-time-spent-by-each-employee.sql) |
+| 2356 | [Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher) | Easy | [SQL](solutions/2356_number-of-unique-subjects-taught-by-each-teacher.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
