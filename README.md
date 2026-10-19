@@ -33,6 +33,16 @@
 
 </details>
 
+<details>
+<summary><strong>DML / DELETE &amp; UPDATE</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 196 | [Delete Duplicate Emails](https://leetcode.com/problems/delete-duplicate-emails) | Easy | [SQL](solutions/196_delete-duplicate-emails.sql) |
+| 627 | [Swap Sex of Employees](https://leetcode.com/problems/swap-sex-of-employees) | Easy | [SQL](solutions/627_swap-sex-of-employees.sql) |
+
+</details>
+
 ## Usage
 
 Each solution is a standalone SQL statement. Run it against the matching schema:
