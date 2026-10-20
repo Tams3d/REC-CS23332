@@ -123,6 +123,23 @@
 
 </details>
 
+<details>
+<summary><strong>Subqueries</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 176 | [Second Highest Salary](https://leetcode.com/problems/second-highest-salary) | Medium | [SQL](solutions/176_second-highest-salary.sql) |
+| 177 | [Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary) | Medium | [SQL](solutions/177_nth-highest-salary.sql) |
+| 550 | [Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv) | Medium | [SQL](solutions/550_game-play-analysis-iv.sql) |
+| 570 | [Managers With at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports) | Medium | [SQL](solutions/570_managers-with-at-least-5-direct-reports.sql) |
+| 585 | [Investments in 2016](https://leetcode.com/problems/investments-in-2016) | Medium | [SQL](solutions/585_investments-in-2016.sql) |
+| 619 | [Biggest Single Number](https://leetcode.com/problems/biggest-single-number) | Easy | [SQL](solutions/619_biggest-single-number.sql) |
+| 3580 | [Find Consistently Improving Employees](https://leetcode.com/problems/find-consistently-improving-employees) | Medium | [SQL](solutions/3580_find-consistently-improving-employees.sql) |
+| 3657 | [Find Loyal Customers](https://leetcode.com/problems/find-loyal-customers) | Medium | [SQL](solutions/3657_find-loyal-customers.sql) |
+| 3716 | [Find Churn Risk Customers](https://leetcode.com/problems/find-churn-risk-customers) | Medium | [SQL](solutions/3716_find-churn-risk-customers.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
