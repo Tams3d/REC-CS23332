@@ -97,6 +97,32 @@
 
 </details>
 
+<details>
+<summary><strong>Joins</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 175 | [Combine Two Tables](https://leetcode.com/problems/combine-two-tables) | Easy | [SQL](solutions/175_combine-two-tables.sql) |
+| 181 | [Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | Easy | [SQL](solutions/181_employees-earning-more-than-their-managers.sql) |
+| 183 | [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order) | Easy | [SQL](solutions/183_customers-who-never-order.sql) |
+| 607 | [Sales Person](https://leetcode.com/problems/sales-person) | Easy | [SQL](solutions/607_sales-person.sql) |
+| 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i) | Easy | [SQL](solutions/1068_product-sales-analysis-i.sql) |
+| 1070 | [Product Sales Analysis III](https://leetcode.com/problems/product-sales-analysis-iii) | Medium | [SQL](solutions/1070_product-sales-analysis-iii.sql) |
+| 1075 | [Project Employees I](https://leetcode.com/problems/project-employees-i) | Easy | [SQL](solutions/1075_project-employees-i.sql) |
+| 1084 | [Sales Analysis III](https://leetcode.com/problems/sales-analysis-iii) | Easy | [SQL](solutions/1084_sales-analysis-iii.sql) |
+| 1158 | [Market Analysis I](https://leetcode.com/problems/market-analysis-i) | Medium | [SQL](solutions/1158_market-analysis-i.sql) |
+| 1280 | [Students and Examinations](https://leetcode.com/problems/students-and-examinations) | Easy | [SQL](solutions/1280_students-and-examinations.sql) |
+| 1327 | [List the Products Ordered in a Period](https://leetcode.com/problems/list-the-products-ordered-in-a-period) | Easy | [SQL](solutions/1327_list-the-products-ordered-in-a-period.sql) |
+| 1378 | [Replace Employee ID With the Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier) | Easy | [SQL](solutions/1378_replace-employee-id-with-the-unique-identifier.sql) |
+| 1407 | [Top Travellers](https://leetcode.com/problems/top-travellers) | Easy | [SQL](solutions/1407_top-travellers.sql) |
+| 1731 | [The Number of Employees Which Report to Each Employee](https://leetcode.com/problems/the-number-of-employees-which-report-to-each-employee) | Easy | [SQL](solutions/1731_the-number-of-employees-which-report-to-each-employee.sql) |
+| 1789 | [Primary Department for Each Employee](https://leetcode.com/problems/primary-department-for-each-employee) | Easy | [SQL](solutions/1789_primary-department-for-each-employee.sql) |
+| 1934 | [Confirmation Rate](https://leetcode.com/problems/confirmation-rate) | Medium | [SQL](solutions/1934_confirmation-rate.sql) |
+| 1965 | [Employees With Missing Information](https://leetcode.com/problems/employees-with-missing-information) | Easy | [SQL](solutions/1965_employees-with-missing-information.sql) |
+| 1978 | [Employees Whose Manager Left the Company](https://leetcode.com/problems/employees-whose-manager-left-the-company) | Easy | [SQL](solutions/1978_employees-whose-manager-left-the-company.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
