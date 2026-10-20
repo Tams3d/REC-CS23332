@@ -164,6 +164,19 @@
 
 </details>
 
+<details>
+<summary><strong>Window Functions</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 178 | [Rank Scores](https://leetcode.com/problems/rank-scores) | Medium | [SQL](solutions/178_rank-scores.sql) |
+| 626 | [Exchange Seats](https://leetcode.com/problems/exchange-seats) | Medium | [SQL](solutions/626_exchange-seats.sql) |
+| 1164 | [Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date) | Medium | [SQL](solutions/1164_product-price-at-a-given-date.sql) |
+| 1321 | [Restaurant Growth](https://leetcode.com/problems/restaurant-growth) | Medium | [SQL](solutions/1321_restaurant-growth.sql) |
+| 3421 | [Find Students Who Improved](https://leetcode.com/problems/find-students-who-improved) | Medium | [SQL](solutions/3421_find-students-who-improved.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
