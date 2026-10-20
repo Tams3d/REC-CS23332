@@ -152,6 +152,18 @@
 
 </details>
 
+<details>
+<summary><strong>Advanced Subqueries</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 185 | [Department Top Three Salaries](https://leetcode.com/problems/department-top-three-salaries) | Hard | [SQL](solutions/185_department-top-three-salaries.sql) |
+| 1045 | [Customers Who Bought All Products](https://leetcode.com/problems/customers-who-bought-all-products) | Medium | [SQL](solutions/1045_customers-who-bought-all-products.sql) |
+| 3521 | [Find Product Recommendation Pairs](https://leetcode.com/problems/find-product-recommendation-pairs) | Medium | [SQL](solutions/3521_find-product-recommendation-pairs.sql) |
+| 3554 | [Find Category Recommendation Pairs](https://leetcode.com/problems/find-category-recommendation-pairs) | Hard | [SQL](solutions/3554_find-category-recommendation-pairs.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
