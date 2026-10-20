@@ -189,6 +189,18 @@
 
 </details>
 
+<details>
+<summary><strong>Advanced String &amp; Pattern Matching</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 1517 | [Find Users With Valid E-Mails](https://leetcode.com/problems/find-users-with-valid-e-mails) | Easy | [SQL](solutions/1517_find-users-with-valid-e-mails.sql) |
+| 3451 | [Find Invalid IP Addresses](https://leetcode.com/problems/find-invalid-ip-addresses) | Hard | [SQL](solutions/3451_find-invalid-ip-addresses.sql) |
+| 3465 | [Find Products With Valid Serial Numbers](https://leetcode.com/problems/find-products-with-valid-serial-numbers) | Easy | [SQL](solutions/3465_find-products-with-valid-serial-numbers.sql) |
+| 3475 | [DNA Pattern Recognition](https://leetcode.com/problems/dna-pattern-recognition) | Medium | [SQL](solutions/3475_dna-pattern-recognition.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
