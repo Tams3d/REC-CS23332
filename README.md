@@ -231,7 +231,7 @@ The solutions are classified against the DBMS course syllabus.
 | Unit | Syllabus focus | Relevant topics |
 | --- | --- | --- |
 | I | Database systems and SQL query | All topic sections |
-| II | PL/SQL, data model and query processing | Joins, subqueries and query shaping |
+| II | PL/SQL, data model and query processing | Not covered by these solutions |
 | III | Normal forms and indexing | Not covered by these solutions |
 | IV | Transactions | Not covered by these solutions |
 | V | NoSQL database | Not covered by these solutions |
