@@ -140,6 +140,18 @@
 
 </details>
 
+<details>
+<summary><strong>Advanced Joins &amp; Relationships</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 262 | [Trips and Users](https://leetcode.com/problems/trips-and-users) | Hard | [SQL](solutions/262_trips-and-users.sql) |
+| 601 | [Human Traffic of Stadium](https://leetcode.com/problems/human-traffic-of-stadium) | Hard | [SQL](solutions/601_human-traffic-of-stadium.sql) |
+| 602 | [Friend Requests II: Who Has the Most Friends](https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends) | Medium | [SQL](solutions/602_friend-requests-ii-who-has-the-most-friends.sql) |
+| 608 | [Tree Node](https://leetcode.com/problems/tree-node) | Medium | [SQL](solutions/608_tree-node.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
