@@ -201,6 +201,41 @@
 
 </details>
 
+<details>
+<summary><strong>Advanced Analytics</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 1174 | [Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii) | Medium | [SQL](solutions/1174_immediate-food-delivery-ii.sql) |
+| 3497 | [Analyze Subscription Conversion](https://leetcode.com/problems/analyze-subscription-conversion) | Medium | [SQL](solutions/3497_analyze-subscription-conversion.sql) |
+| 3564 | [Seasonal Sales Analysis](https://leetcode.com/problems/seasonal-sales-analysis) | Medium | [SQL](solutions/3564_seasonal-sales-analysis.sql) |
+| 3586 | [Find COVID Recovery Patients](https://leetcode.com/problems/find-covid-recovery-patients) | Medium | [SQL](solutions/3586_find-covid-recovery-patients.sql) |
+| 3601 | [Find Drivers With Improved Fuel Efficiency](https://leetcode.com/problems/find-drivers-with-improved-fuel-efficiency) | Medium | [SQL](solutions/3601_find-drivers-with-improved-fuel-efficiency.sql) |
+| 3611 | [Find Overbooked Employees](https://leetcode.com/problems/find-overbooked-employees) | Medium | [SQL](solutions/3611_find-overbooked-employees.sql) |
+| 3617 | [Find Students With Study Spiral Pattern](https://leetcode.com/problems/find-students-with-study-spiral-pattern) | Hard | [SQL](solutions/3617_find-students-with-study-spiral-pattern.sql) |
+| 3626 | [Find Stores With Inventory Imbalance](https://leetcode.com/problems/find-stores-with-inventory-imbalance) | Medium | [SQL](solutions/3626_find-stores-with-inventory-imbalance.sql) |
+| 3642 | [Find Books With Polarized Opinions](https://leetcode.com/problems/find-books-with-polarized-opinions) | Medium | [SQL](solutions/3642_find-books-with-polarized-opinions.sql) |
+| 3673 | [Find Zombie Sessions](https://leetcode.com/problems/find-zombie-sessions) | Hard | [SQL](solutions/3673_find-zombie-sessions.sql) |
+| 3705 | [Find Golden Hour Customers](https://leetcode.com/problems/find-golden-hour-customers) | Medium | [SQL](solutions/3705_find-golden-hour-customers.sql) |
+| 3764 | [Most Common Course Pairs](https://leetcode.com/problems/most-common-course-pairs) | Hard | [SQL](solutions/3764_most-common-course-pairs.sql) |
+| 3793 | [Find Users With High Token Usage](https://leetcode.com/problems/find-users-with-high-token-usage) | Easy | [SQL](solutions/3793_find-users-with-high-token-usage.sql) |
+| 3808 | [Find Emotionally Consistent Users](https://leetcode.com/problems/find-emotionally-consistent-users) | Medium | [SQL](solutions/3808_find-emotionally-consistent-users.sql) |
+| 3832 | [Find Users With Persistent Behavior Patterns](https://leetcode.com/problems/find-users-with-persistent-behavior-patterns) | Hard | [SQL](solutions/3832_find-users-with-persistent-behavior-patterns.sql) |
+
+</details>
+
+## Syllabus Mapping
+
+The solutions are classified against the DBMS course syllabus.
+
+| Unit | Syllabus focus | Relevant topics |
+| --- | --- | --- |
+| I | Database systems and SQL query | All topic sections |
+| II | PL/SQL, data model and query processing | Joins, subqueries and query shaping |
+| III | Normal forms and indexing | Not covered by these solutions |
+| IV | Transactions | Not covered by these solutions |
+| V | NoSQL database | Not covered by these solutions |
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
