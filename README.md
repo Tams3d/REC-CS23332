@@ -177,6 +177,18 @@
 
 </details>
 
+<details>
+<summary><strong>Date &amp; Time Functions</strong></summary>
+
+| # | Problem | Difficulty | Solution |
+| --- | --- | --- | --- |
+| 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature) | Easy | [SQL](solutions/197_rising-temperature.sql) |
+| 511 | [Game Play Analysis I](https://leetcode.com/problems/game-play-analysis-i) | Easy | [SQL](solutions/511_game-play-analysis-i.sql) |
+| 1141 | [User Activity for the Past 30 Days I](https://leetcode.com/problems/user-activity-for-the-past-30-days-i) | Easy | [SQL](solutions/1141_user-activity-for-the-past-30-days-i.sql) |
+| 1193 | [Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i) | Medium | [SQL](solutions/1193_monthly-transactions-i.sql) |
+
+</details>
+
 ## Notes
 
 - Each file holds a single query: no comments, schema, or sample data.
