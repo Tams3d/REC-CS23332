@@ -1,22 +1,27 @@
-WITH ranked AS (
-    SELECT student_id,
-           subject,
-           score,
-           ROW_NUMBER() OVER (PARTITION BY student_id, subject ORDER BY exam_date) AS rn_first,
-           ROW_NUMBER() OVER (PARTITION BY student_id, subject ORDER BY exam_date DESC) AS rn_last,
-           COUNT(*) OVER (PARTITION BY student_id, subject) AS exam_count
-    FROM Scores
-)
 SELECT f.student_id,
        f.subject,
        f.score AS first_score,
        l.score AS latest_score
-FROM ranked f
-JOIN ranked l
-  ON f.student_id = l.student_id
- AND f.subject = l.subject
- AND f.rn_first = 1
- AND l.rn_last = 1
-WHERE f.exam_count >= 2
+FROM (
+    SELECT s1.student_id, s1.subject, s1.score
+    FROM Scores s1
+    WHERE s1.exam_date = (SELECT MIN(s2.exam_date)
+                          FROM Scores s2
+                          WHERE s2.student_id = s1.student_id
+                            AND s2.subject = s1.subject)
+) f
+JOIN (
+    SELECT s1.student_id, s1.subject, s1.score
+    FROM Scores s1
+    WHERE s1.exam_date = (SELECT MAX(s2.exam_date)
+                          FROM Scores s2
+                          WHERE s2.student_id = s1.student_id
+                            AND s2.subject = s1.subject)
+) l
+  ON l.student_id = f.student_id AND l.subject = f.subject
+WHERE (SELECT COUNT(*)
+       FROM Scores s3
+       WHERE s3.student_id = f.student_id
+         AND s3.subject = f.subject) >= 2
   AND l.score > f.score
 ORDER BY f.student_id, f.subject;

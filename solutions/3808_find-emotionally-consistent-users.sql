@@ -1,30 +1,29 @@
-WITH cnt AS (
+SELECT c.user_id,
+       c.reaction AS dominant_reaction,
+       ROUND(c.c / t.total, 2) AS reaction_ratio
+FROM (
     SELECT user_id, reaction, COUNT(*) AS c
     FROM reactions
     GROUP BY user_id, reaction
-),
-tot AS (
+) c
+JOIN (
     SELECT user_id,
            COUNT(*) AS total,
            COUNT(DISTINCT content_id) AS contents
     FROM reactions
     GROUP BY user_id
-),
-ranked AS (
-    SELECT cnt.user_id,
-           cnt.reaction,
-           cnt.c,
-           tot.total,
-           tot.contents,
-           ROW_NUMBER() OVER (PARTITION BY cnt.user_id ORDER BY cnt.c DESC, cnt.reaction ASC) AS rn
-    FROM cnt
-    JOIN tot ON tot.user_id = cnt.user_id
-)
-SELECT user_id,
-       reaction AS dominant_reaction,
-       ROUND(c / total, 2) AS reaction_ratio
-FROM ranked
-WHERE rn = 1
-  AND contents >= 5
-  AND c / total >= 0.6
-ORDER BY reaction_ratio DESC, user_id ASC;
+) t ON t.user_id = c.user_id
+WHERE t.contents >= 5
+  AND c.c / t.total >= 0.6
+  AND NOT EXISTS (
+      SELECT 1
+      FROM (
+          SELECT user_id, reaction, COUNT(*) AS c
+          FROM reactions
+          GROUP BY user_id, reaction
+      ) c2
+      WHERE c2.user_id = c.user_id
+        AND (c2.c > c.c
+             OR (c2.c = c.c AND c2.reaction < c.reaction))
+  )
+ORDER BY reaction_ratio DESC, c.user_id ASC;

@@ -1,51 +1,49 @@
-WITH RECURSIVE nums AS (
-    SELECT 1 AS n
-    UNION ALL
-    SELECT n + 1 FROM nums WHERE n < 1000
-),
-tokens AS (
-    SELECT c.content_id,
-           c.content_text,
-           nm.n AS widx,
-           SUBSTRING_INDEX(SUBSTRING_INDEX(c.content_text, ' ', nm.n), ' ', -1) AS word
-    FROM user_content c
-    JOIN nums nm
-      ON nm.n <= CHAR_LENGTH(c.content_text) - CHAR_LENGTH(REPLACE(c.content_text, ' ', '')) + 1
-),
-parts AS (
-    SELECT t.content_id,
-           t.widx,
-           nm.n AS pidx,
-           SUBSTRING_INDEX(SUBSTRING_INDEX(t.word, '-', nm.n), '-', -1) AS part
-    FROM tokens t
-    JOIN nums nm
-      ON nm.n <= CHAR_LENGTH(t.word) - CHAR_LENGTH(REPLACE(t.word, '-', '')) + 1
-),
-compound AS (
-    SELECT content_id,
-           widx,
-           GROUP_CONCAT(CONCAT(UPPER(LEFT(part, 1)), LOWER(SUBSTRING(part, 2)))
-                        ORDER BY pidx SEPARATOR '-') AS cword
-    FROM parts
-    GROUP BY content_id, widx
-),
-transformed AS (
-    SELECT t.content_id,
-           t.content_text,
-           t.widx,
-           CASE
-               WHEN t.word = '' THEN ''
-               WHEN t.word NOT REGEXP '^[A-Za-z]' THEN t.word
-               WHEN t.word REGEXP '^[A-Za-z]+(-[A-Za-z]+)+$' THEN cp.cword
-               ELSE CONCAT(UPPER(LEFT(t.word, 1)), LOWER(SUBSTRING(t.word, 2)))
-           END AS nword
-    FROM tokens t
-    LEFT JOIN compound cp
-      ON cp.content_id = t.content_id AND cp.widx = t.widx
-)
 SELECT content_id,
        MAX(content_text) AS original_text,
        GROUP_CONCAT(nword ORDER BY widx SEPARATOR ' ') AS converted_text
-FROM transformed
+FROM (SELECT t.content_id,
+        t.content_text,
+        t.widx,
+        CASE
+            WHEN t.word = '' THEN ''
+            WHEN t.word NOT REGEXP '^[A-Za-z]' THEN t.word
+            WHEN t.word REGEXP '^[A-Za-z]+(-[A-Za-z]+)+$' THEN cp.cword
+            ELSE CONCAT(UPPER(LEFT(t.word, 1)), LOWER(SUBSTRING(t.word, 2)))
+        END AS nword
+ FROM (SELECT c.content_id,
+        c.content_text,
+        N.n AS widx,
+        SUBSTRING_INDEX(SUBSTRING_INDEX(c.content_text, ' ', N.n), ' ', -1) AS word
+ FROM user_content c
+ JOIN (SELECT ones.n + tens.n * 10 + hundreds.n * 100 + 1 AS n
+ FROM (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) ones
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) tens
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) hundreds) N
+   ON N.n <= CHAR_LENGTH(c.content_text) - CHAR_LENGTH(REPLACE(c.content_text, ' ', '')) + 1) t
+ LEFT JOIN (SELECT content_id,
+        widx,
+        GROUP_CONCAT(CONCAT(UPPER(LEFT(part, 1)), LOWER(SUBSTRING(part, 2)))
+                     ORDER BY pidx SEPARATOR '-') AS cword
+ FROM (SELECT t.content_id,
+        t.widx,
+        N.n AS pidx,
+        SUBSTRING_INDEX(SUBSTRING_INDEX(t.word, '-', N.n), '-', -1) AS part
+ FROM (SELECT c.content_id,
+        c.content_text,
+        N.n AS widx,
+        SUBSTRING_INDEX(SUBSTRING_INDEX(c.content_text, ' ', N.n), ' ', -1) AS word
+ FROM user_content c
+ JOIN (SELECT ones.n + tens.n * 10 + hundreds.n * 100 + 1 AS n
+ FROM (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) ones
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) tens
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) hundreds) N
+   ON N.n <= CHAR_LENGTH(c.content_text) - CHAR_LENGTH(REPLACE(c.content_text, ' ', '')) + 1) t
+ JOIN (SELECT ones.n + tens.n * 10 + hundreds.n * 100 + 1 AS n
+ FROM (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) ones
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) tens
+ CROSS JOIN (SELECT 0 AS n UNION ALL SELECT 1 AS n UNION ALL SELECT 2 AS n UNION ALL SELECT 3 AS n UNION ALL SELECT 4 AS n UNION ALL SELECT 5 AS n UNION ALL SELECT 6 AS n UNION ALL SELECT 7 AS n UNION ALL SELECT 8 AS n UNION ALL SELECT 9 AS n) hundreds) N
+   ON N.n <= CHAR_LENGTH(t.word) - CHAR_LENGTH(REPLACE(t.word, '-', '')) + 1) parts
+ GROUP BY content_id, widx) cp
+   ON cp.content_id = t.content_id AND cp.widx = t.widx) transformed
 GROUP BY content_id
-ORDER BY content_id
+ORDER BY content_id;

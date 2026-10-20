@@ -1,8 +1,4 @@
-SELECT DISTINCT num AS ConsecutiveNums
-FROM (
-    SELECT num,
-           id - ROW_NUMBER() OVER (PARTITION BY num ORDER BY id) AS grp
-    FROM Logs
-) t
-GROUP BY num, grp
-HAVING COUNT(*) >= 3;
+SELECT DISTINCT l1.num AS ConsecutiveNums
+FROM Logs l1
+JOIN Logs l2 ON l2.id = l1.id + 1 AND l2.num = l1.num
+JOIN Logs l3 ON l3.id = l1.id + 2 AND l3.num = l1.num;

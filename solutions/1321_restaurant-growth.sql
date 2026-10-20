@@ -1,16 +1,13 @@
-WITH daily AS (
-    SELECT visited_on, SUM(amount) AS amount
-    FROM Customer
-    GROUP BY visited_on
-),
-windowed AS (
-    SELECT visited_on,
-           SUM(amount) OVER (ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS amount,
-           ROUND(AVG(amount) OVER (ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS average_amount,
-           ROW_NUMBER() OVER (ORDER BY visited_on) AS rn
-    FROM daily
-)
-SELECT visited_on, amount, average_amount
-FROM windowed
-WHERE rn >= 7
-ORDER BY visited_on;
+SELECT d1.visited_on,
+       SUM(d2.amount) AS amount,
+       ROUND(AVG(d2.amount), 2) AS average_amount
+FROM (SELECT visited_on, SUM(amount) AS amount
+      FROM Customer
+      GROUP BY visited_on) d1
+JOIN (SELECT visited_on, SUM(amount) AS amount
+      FROM Customer
+      GROUP BY visited_on) d2
+  ON d2.visited_on BETWEEN DATE_SUB(d1.visited_on, INTERVAL 6 DAY) AND d1.visited_on
+GROUP BY d1.visited_on
+HAVING COUNT(*) = 7
+ORDER BY d1.visited_on;
